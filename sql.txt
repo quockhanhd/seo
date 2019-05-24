@@ -1,0 +1,22 @@
+CREATE TABLE domains ( 
+id INT(11) NOT NULL AUTO_INCREMENT, 
+domain VARCHAR(50) NULL DEFAULT NULL, 
+protocol VARCHAR(50) NULL DEFAULT 'http', 
+subdomain VARCHAR(50) NULL DEFAULT '', 
+status INT(11) NULL DEFAULT '-1', PRIMARY KEY (id), 
+UNIQUE INDEX domain (domain) ) 
+COLLATE='utf8_unicode_ci' ENGINE=InnoDB;
+
+CREATE TABLE scrap ( 
+id INT(11) NOT NULL AUTO_INCREMENT, 
+domain VARCHAR(255) NULL DEFAULT NULL, 
+url VARCHAR(255) NULL DEFAULT NULL, 
+tag VARCHAR(255) NULL DEFAULT NULL, 
+atribute VARCHAR(255) NULL DEFAULT NULL, 
+value VARCHAR(255) NULL DEFAULT NULL, 
+text VARCHAR(255) NULL DEFAULT NULL, 
+control VARCHAR(255) NULL DEFAULT NULL, 
+PRIMARY KEY (id), 
+UNIQUE INDEX control (control) ) 
+COLLATE='utf8_unicode_ci' ENGINE=InnoDB ;
+INSERT INTO `domains`(`id`, `domain`, `protocol`) VALUES ('1','dammio.com','https')
